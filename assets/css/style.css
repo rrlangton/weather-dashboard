@@ -1,16 +1,57 @@
+/* Weather Dashbard Header */
 .header {
-    padding: 60px;
+    padding: 1px;
     text-align: center;
-    background: #1119ff;
+    background: #0d1179;
     color: white;
-    font-size: 50px;
+    font-size: 25px;
     margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
+  /* 5-Day Forecast */
   .content {
     width: 450px;
     padding: 5px;
     margin-top: 20px;
     text-align: left;
+    font-size: 15px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 20px; /* Adjust as needed */
+  }
+
+      /* Forecast cards, Adds shadows to create the "card" effect */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: #0d1179;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 12px;
   }
   
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+
+.container {
+  font-size: 20px;
+  border-style: solid;
+  padding: 20px;
+}
+ 
+.btn-group {
+  padding: 10px;
+  font-size:20px;
+}
+
+
+
