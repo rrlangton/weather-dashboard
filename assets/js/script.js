@@ -64,7 +64,7 @@ function apiRequest() {
     let locQueryUrl = 'https://api.openweathermap.org/search/?fo=json';
   
     if (format) {
-      locQueryUrl = `https://api.openweathermap.org/${format}/?fo=json`;
+      locQueryUrl = `https://api.openweathermap.org/$format/?fo=json`;
     }
   
     locQueryUrl = `${locQueryUrl}&q=${query}`;
