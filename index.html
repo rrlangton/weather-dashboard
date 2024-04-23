@@ -1,99 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <title>Weather Dashboard</title>
+</head>
+<body>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/js/script.js" />
-    <script src="https://kit.fontawesome.com/f185.js" crossorigin="anonymous"></script>
-    <title>Weather Dashboard</title>
-  </head>
+  <div class="header">
+    <h1>☀️ Weather Dashboard ☀️</h1>
+  </div>
 
-  <body>
-
-    <div class="header">
-      <h1>Weather Dashboard</h1>
-    </div>
-
-    <div class="container">
-      <h1 id="currentWeather"></h1>
-      <i class="fa-light fa-sun fa-spin"></i>
-    </div>    
-
-    <!-- search bar "search for a city" -->
-<div class="flex-row align-start align-stretch-md align-content-start align-content-stretch-md min-100-vh bg-primary">
-    <div class="col-12 col-md-3 bg-light p-3">
-      <h1 class="text-primary">Search for a City</h1>
-      <form id="search-form" class="mb-2">
-        <input id="search-input" class="form-input w-100" type="text" placeholder="San Diego">
-        <select id="format-input" class="form-input w-100">
-          <option value="" disabled selected>Select a city</option>
-          <option value="atlanta">Atlanta</option>
-          <option value="denver">Denver</option>
-          <option value="seattle">Seattle</option>
-          <option value="san-francisco">San Francisco</option>
-          <option value="orlando">Orlando</option>
-          <option value="new-york">New York</option>
-          <option value="card-body">Chicago</option>
-          <option value="austin">Austin</option>
-        </select>
-        <button class="btn btn-info btn-block">Search</button>
-      </form>
-      <div class="col-12 col-md-9 p-3 text-light">
-        <h2>Showing results for <span id="result-text"></span></h2>
-        <div id="result-content"></div>
-      </div>
-    </div>
-    <div class="content">
-      <h1>5-day Forecast:</h1>
-    </div>
-
-    <div class="card" style="width: 18rem;">
-      <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Date</div>
-      </div class="card-body">
-          <h2 class="card-title">Weather Forecast 1</h2>
-          <i class="fa-light fa-sun fa-spin"></i>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div id="currentWeather" class="card">
+          <!-- Current weather information will be displayed here -->
         </div>
       </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Date</div>
-        <div class="card-body">
-          <h2 class="card-title">Weather Forecast 2</h2>
-          <i class="fa-light fa-sun fa-spin"></i>
+      <div class="search-card">
+        <h1 class="text-primary">Search for a City</h1>
+        <form id="search-form">
+          <input id="search-input" class="form-input w-100" type="text" placeholder="Enter a city">
+          <button type="submit" class="btn btn-info btn-block">Search</button>
+        </form>
+        <div class="city-buttons-container">
+          <!-- City buttons will be displayed here -->
         </div>
       </div>
-    </div><div class="card" style="width: 18rem;">
-      <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Date</div>
-        <div class="card-body">
-          <h2 class="card-title">Weather Forecast 3</h2>
-          <i class="fa-light fa-sun fa-spin"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Date</div>
-        <div class="card-body">
-          <h2 class="card-title">Weather Forecast 4</h2>
-          <i class="fa-light fa-sun fa-spin"></i>
-        </div>
-      </div>
-    </div>
-    <div class="card" style="width: 18rem;">
-      <div class="card text-bg-primary mb-3" style="max-width: 18rem;">
-        <div class="card-header">Date</div>
-        <div class="card-body">
-          <h2 class="card-title">Weather Forecast 5</h2>
-          <i class="fa-light fa-sun fa-spin"></i>
-        </div>
-      </div>
-    </div>
-  
-    <script src="./assets/js/script.js"></script>
-  </body>
+      
+      <div id="weatherForecast" class="card-container"></div>      
+
+  <script src="./assets/js/script.js"></script>
+  <script src="https://kit.fontawesome.com/f185.js" crossorigin="anonymous"></script>
+
+</body>
 </html>

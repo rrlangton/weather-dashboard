@@ -1,11 +1,12 @@
 /* Weather Dashbard Header */
 .header {
-    padding: 1px;
+    padding-top: 1px;
+    padding-bottom: 1px;
     text-align: center;
     background: #0d1179;
     color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     font-size: 25px;
-    margin-bottom: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
@@ -13,28 +14,30 @@
   .content {
     width: 450px;
     padding: 5px;
-    margin-top: 20px;
-    text-align: left;
+    text-align: center;
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
   }
 
   .card-container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-around; /* Adjust as needed */
     align-items: center;
     flex-wrap: wrap;
     margin-top: 20px; /* Adjust as needed */
-  }
+}
 
       /* Forecast cards, Adds shadows to create the "card" effect */
   .card {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
-    background-color: #0d1179;
-    color: white;
+    padding: 10px;
+    background-color: white;
+    color: black;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 12px;
+    font-size: 15px;
+    text-align: center;
+    flex-wrap: wrap;
   }
   
   /* On mouse-over, add a deeper shadow */
@@ -44,8 +47,8 @@
 
 .container {
   font-size: 20px;
-  border-style: solid;
-  padding: 20px;
+  padding: 10px;
+  flex-wrap: wrap;
 }
  
 .btn-group {
@@ -53,5 +56,60 @@
   font-size:20px;
 }
 
+/* Search card */
+.search-card {
+  width: 300px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+  margin-right: 20px; /* Adjust spacing as needed */
+  margin-top: 20px; /* Add margin-top to align with weather cards */
+}
 
+.search-card h1 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
 
+.search-card input[type="text"],
+.search-card button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.search-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-card button:hover {
+  background-color: #0056b3;
+}
+
+/* City buttons */
+.city-buttons-container {
+  margin-top: 10px;
+}
+
+.city-button {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 18px;
+  background-color: #0d117;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.city-button:hover {
+  background-color: #e6e6e6;
+}
