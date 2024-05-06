@@ -10,18 +10,18 @@
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   }
 
-  .content {
+  /* .content {
     width: 450px;
     padding: 5px;
     font-size: 15px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-  }
+  } */
 
   .card-container {
     display: flex;
     justify-content: space-around; 
     align-items: center;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     margin-top: 20px; 
 }
 
@@ -42,9 +42,10 @@
   }
 
 .container {
+  width: 100%;
   font-size: 20px;
   padding: 10px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
 }
  
 .btn-group {
@@ -53,7 +54,7 @@
 }
 
 .search-card {
-  width: 300px;
+  /* width: 300px; */
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 5px;

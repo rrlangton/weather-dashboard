@@ -4,7 +4,7 @@ const searchFormEl = document.querySelector('#search-form');
 const cityButtonsContainer = document.querySelector('#city-buttons-container');
 
 function apiRequest(query) {
-  const locQueryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APIKey}`;
+  const locQueryUrl = `https://api.openweathermap.org/data/2.5/weather?q=${query}&appid=${APIKey}&units=imperial`;
 
   fetch(locQueryUrl)
     .then(response => response.json())
@@ -65,26 +65,29 @@ const cityButtonsContainer = document.querySelector('.city-buttons-container');
 });
 
 function updateWeatherForecast(city) {
-  const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}`;
+  const queryURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${APIKey}&units=imperial`;
 
   fetch(queryURL)
     .then(response => response.json())
     .then(data => {
-      const forecastData = data.list;
+      const forecastData = [
+        data.list[0], data.list[8], data.list[16], data.list[24], data.list[32]
+      ];
 
       // Clear existing forecast cards
       const forecastContainer = document.getElementById('weatherForecast');
       forecastContainer.innerHTML = '';
-
+      console.log(forecastData);
       // Display weather forecast for the next five days
       for (let i = 0; i < 5; i++) {
         const forecast = forecastData[i];
 
         const card = document.createElement('div');
         card.classList.add('card');
+        card.classList.add('m-2');
         card.innerHTML = `
-          <div class="card-header">${new Date(forecast.dt * 1000).toLocaleDateString()}</div>
-          <div class="card-body">
+          <div class="">${new Date(forecast.dt * 1000).toLocaleDateString()}</div>
+          <div class="">
             <p>Temperature: ${forecast.main.temp}°F</p>
             <p>Wind Speed: ${forecast.wind.speed} m/s</p>
             <p>Humidity: ${forecast.main.humidity}%</p>

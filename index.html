@@ -1,39 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Weather Dashboard</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>Weather Dashboard</title>
+  </head>
+  <body>
+    <div class="header">
+      <h1>☀️ Weather Dashboard ☀️</h1>
+    </div>
 
-  <div class="header">
-    <h1>☀️ Weather Dashboard ☀️</h1>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <div id="currentWeather" class="card">
-          <!-- Current weather information will be displayed here -->
-        </div>
-      </div>
+    <div class="container d-flex flex-row">
       <div class="search-card">
         <h1 class="text-primary">Search for a City:</h1>
         <form id="search-form">
-          <input id="search-input" class="form-input w-100" type="text" placeholder="Enter a city">
+          <input
+            id="search-input"
+            class="form-input w-100"
+            type="text"
+            placeholder="Enter a city"
+          />
           <button type="submit" class="btn btn-info btn-block">Search</button>
         </form>
         <div class="city-buttons-container">
           <!-- City buttons will be displayed here -->
         </div>
       </div>
+      <div class=""> 
+        <div class="row">
+          <div id="currentWeather" class="card">
+            <!-- Current weather information will be displayed here -->
+          </div>
+        </div>
+        
+
+        <div id="weatherForecast" class="card-container d-flex flex-column flex-md-row"></div>
+      </div>
+        
       
-      <div id="weatherForecast" class="card-container"></div>      
+    </div>
 
-  <script src="./assets/js/script.js"></script>
-  <script src="https://kit.fontawesome.com/f185.js" crossorigin="anonymous"></script>
-
-</body>
+    <script src="./assets/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/f185.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
 </html>
