@@ -10,9 +10,7 @@ As a user this application will help me retrieve the weather outlook for multipl
 
 ## Mock-up
 
-The following image shows the application's appearance and functionality.
-
-
+![The following image shows the application's appearance and functionality.](./Assets/images/weatherDashboard.png)
 
 ### Technical Criteria
 
